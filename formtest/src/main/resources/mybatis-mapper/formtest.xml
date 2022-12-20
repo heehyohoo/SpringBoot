@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.formtest.mapper.FormtestMapper">
+
+    <insert id="insertMember" parameterType="Hashmap">
+        INSERT INTO formtest
+            (name,phone,email,password,gender,terms)
+        values
+            (#{name},#{phone},#{email},#{password},#{gender},#{Terms})
+    </insert>
+
+
+</mapper>
