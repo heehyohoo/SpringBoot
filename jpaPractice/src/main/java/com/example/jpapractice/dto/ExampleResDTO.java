@@ -12,4 +12,5 @@ import lombok.NoArgsConstructor;
 public class ExampleResDTO {
 
     private String name;
+
 }

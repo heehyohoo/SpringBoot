@@ -53,6 +53,53 @@ public class ExampleService {
     }
 
 
+    public List<ExampleResDTO> selectByName(ExampleReqDTO exampleReqDTO) {
+
+        List<Example> result = exampleRepository.findByName(exampleReqDTO.getName());
+
+        List<ExampleResDTO> resList = result.stream()
+                .map(ex -> new ExampleResDTO(ex.getName()))
+                .collect(Collectors.toList());
+
+        return resList;
+    }
+
+    public List<ExampleResDTO> findByNameStartingWith(ExampleReqDTO exampleReqDTO) {
+
+        List<Example> result = exampleRepository.findByNameStartingWith(exampleReqDTO.getName());
+
+        List<ExampleResDTO> resList = result.stream()
+                .map(ex -> new ExampleResDTO((ex.getName())))
+                .collect(Collectors.toList());
+
+        return resList;
+    }
+    public List<ExampleResDTO> findByPriceLessThan(ExampleReqDTO exampleReqDTO) {
+
+        List<Example> result = exampleRepository.findByPriceLessThan(exampleReqDTO.getPrice());
+
+        List<ExampleResDTO> resList = result.stream()
+                .map(ex -> new ExampleResDTO((ex.getName())))
+                .collect(Collectors.toList());
+
+        return resList;
+    }
+
+    public List<ExampleResDTO> findByNameAndPrice(ExampleReqDTO exampleReqDTO) {
+
+        List<Example> result = exampleRepository.findByNameAndPrice(exampleReqDTO.getName(),exampleReqDTO.getPrice());
+
+        List<ExampleResDTO> resList = result.stream()
+                .map(ex -> new ExampleResDTO((ex.getName())))
+                .collect(Collectors.toList());
+
+        return resList;
+    }
+
+
+
+
+
 
 
 

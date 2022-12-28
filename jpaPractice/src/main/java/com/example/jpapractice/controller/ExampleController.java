@@ -3,6 +3,7 @@ package com.example.jpapractice.controller;
 
 import com.example.jpapractice.dto.ExampleReqDTO;
 import com.example.jpapractice.dto.ExampleResDTO;
+import com.example.jpapractice.entity.Example;
 import com.example.jpapractice.service.ExampleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -47,6 +48,22 @@ public class ExampleController {
         exampleService.deleteAll();
     }
 
+    @GetMapping("/findByNameStartingWith")
+    public List<ExampleResDTO> findByNameStartingWith() {
+        ExampleReqDTO exampleReqDTO = new ExampleReqDTO(1L,"fish",3000);
+        return exampleService.findByNameStartingWith(exampleReqDTO);
+    }
 
+    @GetMapping("/findByPriceLessThan")
+    public List<ExampleResDTO> findByPriceLessThan() {
+        ExampleReqDTO exampleReqDTO = new ExampleReqDTO(1L,"fish",3000);
+        return exampleService.findByPriceLessThan(exampleReqDTO);
+    }
+
+    @GetMapping("/findByNameAndPrice")
+    public List<ExampleResDTO> findByNameAndPrice() {
+        ExampleReqDTO exampleReqDTO = new ExampleReqDTO(1L,"tutle",4500);
+        return exampleService.findByNameAndPrice(exampleReqDTO);
+    }
 
 }
