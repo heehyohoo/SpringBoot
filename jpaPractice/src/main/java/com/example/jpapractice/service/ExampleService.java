@@ -44,6 +44,16 @@ public class ExampleService {
         return new ExampleResDTO(id.orElse(null).getName());
     }
 
+    public void deleteOne(ExampleReqDTO exampleReqDTO) {
+        exampleRepository.deleteById(exampleReqDTO.getId());
+    }
+
+    public void deleteAll() {
+        exampleRepository.deleteAll();
+    }
+
+
+
 
 
 }

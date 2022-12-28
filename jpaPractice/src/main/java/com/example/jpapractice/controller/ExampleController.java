@@ -36,4 +36,17 @@ public class ExampleController {
     public ExampleResDTO selectOne() {
         return exampleService.selectOne(new ExampleReqDTO(1L,"fish",1500));
     }
+
+    @GetMapping("/deleteOne")
+    public void deleteOne() {
+        exampleService.deleteOne(new ExampleReqDTO(1L,"fish",1500));
+    }
+
+    @GetMapping("/deleteAll")
+    public void deleteAll() {
+        exampleService.deleteAll();
+    }
+
+
+
 }
