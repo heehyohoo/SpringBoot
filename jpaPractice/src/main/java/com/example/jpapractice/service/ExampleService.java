@@ -8,6 +8,10 @@ import com.example.jpapractice.repository.ExampleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
 @Service
 public class ExampleService {
 
@@ -20,8 +24,24 @@ public class ExampleService {
     public ExampleResDTO merge(ExampleReqDTO req) {
         Example example = req.toEntity();
         exampleRepository.save(example);
-
         return new ExampleResDTO(example.getName());
+    }
+
+
+    public List<ExampleResDTO> selectAll() {
+
+        List<Example> result = exampleRepository.findAll();
+
+        List<ExampleResDTO> resList = result.stream()
+                .map(ex -> new ExampleResDTO((ex.getName())))
+                .collect(Collectors.toList());
+
+        return resList;
+    }
+
+    public ExampleResDTO selectOne(ExampleReqDTO exampleReqDTO) {
+        Optional<Example> id = exampleRepository.findById(exampleReqDTO.getId());
+        return new ExampleResDTO(id.orElse(null).getName());
     }
 
 

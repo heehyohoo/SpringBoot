@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class ExampleController {
 
@@ -23,5 +25,15 @@ public class ExampleController {
     public ExampleResDTO mergeExample() {
         ExampleReqDTO dto = new ExampleReqDTO(1L,"fish",1500);
         return exampleService.merge(dto);
+    }
+
+    @GetMapping("/selectAll")
+    public List<ExampleResDTO> selectAll() {
+        return exampleService.selectAll();
+    }
+
+    @GetMapping("/selectOne")
+    public ExampleResDTO selectOne() {
+        return exampleService.selectOne(new ExampleReqDTO(1L,"fish",1500));
     }
 }
