@@ -21,7 +21,7 @@ public class TodoRestController {
     }
 
     @DeleteMapping("/todos/{id}")
-    public String deleteTodos(@RequestParam("id") String id) {
+    public String deleteTodos(@PathVariable("id") String id) {
         return todoService.deleteTodos(id);
     }
 

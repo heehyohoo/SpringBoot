@@ -118,6 +118,7 @@
 
     </style>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -142,95 +143,53 @@
 
     function renderTodos() {
         listElement.innerHTML = "";
-        let httpRequest;
-        /* 통신에 사용 될 XMLHttpRequest 객체 정의 */
-        httpRequest = new XMLHttpRequest();
-        /* httpRequest의 readyState가 변화했을때 함수 실행 */
-        httpRequest.onreadystatechange = () => {
-            /* readyState가 Done이고 응답 값이 200일 때, 받아온 response로 name과 age를 그려줌 */
-            if (httpRequest.readyState === XMLHttpRequest.DONE) {
-                if (httpRequest.status === 200) {
-                    let result = httpRequest.response;
 
-                    for(let i=0;i<result.length;i++){
-                        let todoElement = document.createElement("li");
-                        let todoText = document.createTextNode(result[i]);
+        $.ajax({
+            url:'/todos',
+            type:'GET',
+            success:function(resp){
+                let result =resp;
 
-                        let linkElement = document.createElement("a");
+                for(let i=0;i<result.length;i++){
+                    let todoElement = document.createElement("li");
+                    let todoText = document.createTextNode(result[i].todos);
 
-                        linkElement.setAttribute("href", "#");
+                    let linkElement = document.createElement("a");
 
-                        linkElement.setAttribute("onclick", "deleteTodo(" + i + ")");
+                    linkElement.setAttribute("href", "#");
 
-                        let linkText = document.createTextNode("done");
+                    linkElement.setAttribute("onclick", "deleteTodo(" + result[i].id + ")");
 
-                        linkElement.appendChild(linkText);
+                    let linkText = document.createTextNode("done");
 
-                        todoElement.appendChild(todoText);
-                        todoElement.appendChild(linkElement);
-                        listElement.appendChild(todoElement);
-                    }
+                    linkElement.appendChild(linkText);
 
-                } else {
-                    alert('Request Error!');
+                    todoElement.appendChild(todoText);
+                    todoElement.appendChild(linkElement);
+                    listElement.appendChild(todoElement);
                 }
             }
-        };
-        /* Get 방식으로 name 파라미터와 함께 요청 */
-        httpRequest.open('GET', '/list');
-        /* Response Type을 Json으로 사전 정의 */
-        httpRequest.responseType = "json";
-        /* 정의된 서버에 요청을 전송 */
-        httpRequest.send();
+
+        });
     }
 
     renderTodos();
 
     function addTodo() {
         let todoText = inputElement.value;
-        let httpRequest;
 
-        /* 통신에 사용 될 XMLHttpRequest 객체 정의 */
-            httpRequest = new XMLHttpRequest();
-            /* httpRequest의 readyState가 변화했을때 함수 실행 */
-            httpRequest.onreadystatechange = () => {
-                /* readyState가 Done이고 응답 값이 200일 때, 받아온 response로 name과 age를 그려줌 */
-                if (httpRequest.readyState === XMLHttpRequest.DONE) {
-                    if (httpRequest.status === 200) {
+        $.ajax({
+            url:'/todos',
+            data:{'todos':todoText},
+            type:'POST',
+            success:function(resp){
 
-                        listElement.innerHTML = "";
-                        let result = httpRequest.response;
-
-                        for(let i=0;i<result.length;i++) {
-                            let todoElement = document.createElement("li");
-                            let todoText = document.createTextNode(result[i]);
-
-                            let linkElement = document.createElement("a");
-
-                            linkElement.setAttribute("href", "#");
-
-                            linkElement.setAttribute("onclick", "deleteTodo(" + i + ")");
-
-                            let linkText = document.createTextNode("done");
-
-                            linkElement.appendChild(linkText);
-
-                            todoElement.appendChild(todoText);
-                            todoElement.appendChild(linkElement);
-                            listElement.appendChild(todoElement);
-                        }
-
-                    } else {
-                        alert('Request Error!');
-                    }
+                if(resp=='success'){
+                    renderTodos();
                 }
-            };
-            /* Get 방식으로 name 파라미터와 함께 요청 */
-            httpRequest.open('GET', '/receiveList?todo=' + todoText);
-            /* Response Type을 Json으로 사전 정의 */
-            httpRequest.responseType = "json";
-            /* 정의된 서버에 요청을 전송 */
-            httpRequest.send();
+            }
+
+        });
 
 
         inputElement.value = "";
@@ -241,49 +200,16 @@
 
     function deleteTodo(pos) {
 
-        let httpRequest;
-        /* 통신에 사용 될 XMLHttpRequest 객체 정의 */
-        httpRequest = new XMLHttpRequest();
-        /* httpRequest의 readyState가 변화했을때 함수 실행 */
-        httpRequest.onreadystatechange = () => {
-            /* readyState가 Done이고 응답 값이 200일 때, 받아온 response로 name과 age를 그려줌 */
-            if (httpRequest.readyState === XMLHttpRequest.DONE) {
-                if (httpRequest.status === 200) {
-
-                    listElement.innerHTML = "";
-                    let result = httpRequest.response;
-
-                    for(let i=0;i<result.length;i++){
-                        let todoElement = document.createElement("li");
-                        let todoText = document.createTextNode(result[i]);
-
-                        let linkElement = document.createElement("a");
-
-                        linkElement.setAttribute("href", "#");
-
-                        linkElement.setAttribute("onclick", "deleteTodo(" + i + ")");
-
-                        let linkText = document.createTextNode("done");
-
-                        linkElement.appendChild(linkText);
-
-                        todoElement.appendChild(todoText);
-                        todoElement.appendChild(linkElement);
-                        listElement.appendChild(todoElement);
-                    }
-
-                } else {
-                    alert('Request Error!');
+        $.ajax({
+            url:'/todos/'+pos,
+            type:'DELETE',
+            success:function(resp){
+                if(resp=='success'){
+                    renderTodos();
                 }
             }
-        };
-        /* Get 방식으로 name 파라미터와 함께 요청 */
-        httpRequest.open('GET', '/deleteList?todo=' + pos);
-        /* Response Type을 Json으로 사전 정의 */
-        httpRequest.responseType = "json";
-        /* 정의된 서버에 요청을 전송 */
-        httpRequest.send();
 
+        });
 
         inputElement.value = "";
 
