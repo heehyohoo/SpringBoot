@@ -1,8 +1,7 @@
 package com.example.jpatodosangsu.service;
 
+public interface TodoService {
 
-import org.springframework.stereotype.Service;
 
-@Service
-public class TodoService {
+
 }
