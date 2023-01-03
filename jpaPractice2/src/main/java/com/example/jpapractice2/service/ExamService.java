@@ -7,6 +7,9 @@ import com.example.jpapractice2.repository.ExamRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 public class ExamService {
 
@@ -29,6 +32,17 @@ public class ExamService {
         return new ExamResDTO(exam.getName()); // 리턴값은 안에서 나가는 DTO 타입으로 객체를 생성하는데
                                                // 현재 ResDTO의 경우 필드의 멤버가 name만 있다 name만 넣어서 객체를 만들어 내보내겟다.
                                               // 필요시 필드를 늘리면 된다.
+    }
+
+    public List<ExamResDTO> selectAll() {
+        List<Exam> list = examRepository.findAll();// 엔티티의 리스트 값이 나옴.
+                                                    // 이것을 이제 Res타입 DTO 객체로 변환해야 한다.
+        List<ExamResDTO> result = list.stream()     //변환하고자 하는 배열에 스트림을 호출
+                .map(Exam -> new ExamResDTO(Exam.getName())) // 변환하고자 하는 배열을 Exam 이라고 칭하고 이것을 ㅡ> 변환할건데 새로운 객체로 만들거다. ResDTO의 getName을 가지고
+                .collect(Collectors.toList()); // 다시 배열로 변환한다.
+                // 원래는 for반복문을 사용해도 되지만 가독성이 좋은 코드를 만들기 위해 스트림을 사용한다.
+                // 사실 성능면에서도 for문이 더 좋다고함. 유지보수 입장에서 봤을때 stream api를 사용하는것을 권장.
+        return result;
     }
 
 

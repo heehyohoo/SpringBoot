@@ -3,7 +3,7 @@ import com.example.jpatodo.entity.Todolist;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
-public interface TodolistRepository extends JpaRepository<Todolist,Integer> {
+public interface TodolistRepository extends JpaRepository<Todolist,Long> {
 
 }
 

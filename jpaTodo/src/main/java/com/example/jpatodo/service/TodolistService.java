@@ -1,12 +1,15 @@
 package com.example.jpatodo.service;
 
 
+import com.example.jpatodo.dto.TodoReqDTO;
+import com.example.jpatodo.dto.TodoResDTO;
 import com.example.jpatodo.entity.Todolist;
 import com.example.jpatodo.repository.TodolistRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class TodolistService {
@@ -18,12 +21,21 @@ public class TodolistService {
         this.todolistRepository = todolistRepository;
     }
 
-    public void receiveList(Todolist todolist) {
+    public void receiveList(TodoReqDTO todoReqDTO) {
+        Todolist todolist = todoReqDTO.toEntity();
         todolistRepository.save(todolist);
+
     }
 
-    public List<Todolist> SelectTodolist() {
-        return todolistRepository.findAll();
+    public List<TodoResDTO> SelectTodolist() {
+        List<Todolist> list = todolistRepository.findAll();
+
+        List<TodoResDTO> result = list.stream()
+                .map(todolist -> new TodoResDTO(todolist.getTodo()))
+                .collect(Collectors.toList());
+        return result;
+
+
     }
 
 

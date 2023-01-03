@@ -10,15 +10,13 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Getter
 @Setter
+@Builder
 public class Todolist {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Transient
-    Integer id;
+    private Long id;
 
-    String todo;
+    private String todo;
+    private String indate;
 
-//    @Transient
-    String indate;
 }
