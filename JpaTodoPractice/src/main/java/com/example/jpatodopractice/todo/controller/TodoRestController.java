@@ -2,12 +2,10 @@ package com.example.jpatodopractice.todo.controller;
 
 
 import com.example.jpatodopractice.dto.ResponseTodo;
+import com.example.jpatodopractice.service.TodoService;
 import com.example.jpatodopractice.service.impl.TodoServiceImpl;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -15,7 +13,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class TodoRestController {
 
-    private final TodoServiceImpl todoService;
+    private final TodoService todoService;
 
     @GetMapping("/todos")
     public List<ResponseTodo> todoList() {
@@ -23,7 +21,7 @@ public class TodoRestController {
     }
 
     @DeleteMapping("/todos/{id}")
-    public String deleteTodos(String id) {
+    public String deleteTodos(@PathVariable String id) {
         return todoService.deleteTodos(id);
     }
 
