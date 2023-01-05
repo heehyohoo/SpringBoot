@@ -26,13 +26,9 @@ public class UserController {
         String user = userService.selectUser(requestUser);
 
         if(user.equals("Success")) {
-            session.setAttribute("email",requestUser.getEmail());
-            return user;
+            session.setAttribute("email", requestUser.getEmail());
         }
-        model.addAttribute("message","일치하는 회원이 없습니다.");
-        model.addAttribute("url","/goLogin");
-
-        return "Message";
+        return user;
     }
 
 }
