@@ -28,7 +28,9 @@ public class ScheduleController {
     }
 
     @PostMapping("/schedules")
-    public String insertSchedules(ScheduleRequest scheduleRequest) {
+    public String insertSchedules(ScheduleRequest scheduleRequest,HttpSession session) {
+        String email = String.valueOf(session.getAttribute("email"));
+        scheduleRequest.setEmail(email);
         return scheduleService.insertSchedules(scheduleRequest);
     }
 
