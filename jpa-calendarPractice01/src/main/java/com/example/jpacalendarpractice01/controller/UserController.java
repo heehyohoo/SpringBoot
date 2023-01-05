@@ -22,7 +22,7 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public String selectUser(RequestUser requestUser, HttpSession session, Model model) {
+    public String selectUser(RequestUser requestUser, HttpSession session) {
         String user = userService.selectUser(requestUser);
 
         if(user.equals("success")) {
