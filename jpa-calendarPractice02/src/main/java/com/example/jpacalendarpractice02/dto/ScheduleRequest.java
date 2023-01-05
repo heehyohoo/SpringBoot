@@ -4,8 +4,6 @@ import com.example.jpacalendarpractice02.entity.Schedule;
 import com.example.jpacalendarpractice02.entity.User;
 import lombok.*;
 
-import javax.persistence.Table;
-
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -21,7 +19,7 @@ public class ScheduleRequest {
     private String date;
 
 
-    public Schedule toEntity(ScheduleRequest scheduleRequest) {
+    public Schedule toEntity() {
         return Schedule.builder()
                 .user(User.builder().email(email).build())
                 .id(id)
