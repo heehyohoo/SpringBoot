@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface ScheduleService {
 
-    List<ResponseSchedule> ScheduleList(String email);
+    List<ResponseSchedule> scheduleList(String email);
 
     String insertSchedule(RequestSchedule requestSchedule);
 

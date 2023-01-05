@@ -45,8 +45,6 @@ public class ScheduleServiceImpl implements ScheduleService {
 
     @Override
     public String insertSchedules(ScheduleRequest scheduleRequest) {
-
-
         try {
             scheduleRepository.save(scheduleRequest.toEntity());
 

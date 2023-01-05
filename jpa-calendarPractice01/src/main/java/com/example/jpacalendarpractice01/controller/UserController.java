@@ -25,7 +25,7 @@ public class UserController {
     public String selectUser(RequestUser requestUser, HttpSession session, Model model) {
         String user = userService.selectUser(requestUser);
 
-        if(user.equals("Success")) {
+        if(user.equals("success")) {
             session.setAttribute("email", requestUser.getEmail());
         }
         return user;

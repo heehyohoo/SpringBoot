@@ -19,7 +19,7 @@ public class ScheduleController {
     @GetMapping("/schedules")
     public List<ResponseSchedule> ScheduleList(HttpSession session) {
         String email = String.valueOf(session.getAttribute("email"));
-        return scheduleService.ScheduleList(email);
+        return scheduleService.scheduleList(email);
     }
 
     @PostMapping("/schedules")
