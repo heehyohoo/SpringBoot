@@ -1,0 +1,110 @@
+2023-01-09 19:41:43,819 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    select
+        user_.email,
+        user_.password as password2_1_ 
+    from
+        schedule_user user_ 
+    where
+        user_.email=?
+2023-01-09 19:41:43,843 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-1] binding parameter [1] as [VARCHAR] - [null]
+2023-01-09 19:41:43,854 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    insert 
+    into
+        schedule
+        (date, title, email) 
+    values
+        (?, ?, ?)
+2023-01-09 19:41:43,854 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-1] binding parameter [1] as [VARCHAR] - [2023-01-11]
+2023-01-09 19:41:43,855 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-1] binding parameter [2] as [VARCHAR] - [14516]
+2023-01-09 19:41:43,856 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-1] binding parameter [3] as [VARCHAR] - [null]
+2023-01-09 19:41:49,620 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-4] 
+    select
+        user0_.email as email1_1_,
+        user0_.password as password2_1_ 
+    from
+        schedule_user user0_ 
+    where
+        user0_.email=? 
+        and user0_.password=?
+2023-01-09 19:41:49,621 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-4] binding parameter [1] as [VARCHAR] - [1]
+2023-01-09 19:41:49,622 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-4] binding parameter [2] as [VARCHAR] - [1]
+2023-01-09 19:41:51,304 ERROR com.example.jpacalendarpractice02.controller.ScheduleController [http-nio-8080-exec-9] schedulelist
+2023-01-09 19:41:51,305 WARN com.example.jpacalendarpractice02.controller.ScheduleController [http-nio-8080-exec-9] schedulelist
+2023-01-09 19:41:51,305 INFO com.example.jpacalendarpractice02.controller.ScheduleController [http-nio-8080-exec-9] schedulelist
+2023-01-09 19:41:51,308 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-9] 
+    select
+        schedule0_.id as id1_0_,
+        schedule0_.date as date2_0_,
+        schedule0_.title as title3_0_,
+        schedule0_.email as email4_0_ 
+    from
+        schedule schedule0_ 
+    where
+        schedule0_.email=?
+2023-01-09 19:41:51,309 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-9] binding parameter [1] as [VARCHAR] - [1]
+2023-01-09 19:41:53,979 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-8] 
+    select
+        user_.email,
+        user_.password as password2_1_ 
+    from
+        schedule_user user_ 
+    where
+        user_.email=?
+2023-01-09 19:41:53,980 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-8] binding parameter [1] as [VARCHAR] - [1]
+2023-01-09 19:41:53,981 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-8] 
+    insert 
+    into
+        schedule
+        (date, title, email) 
+    values
+        (?, ?, ?)
+2023-01-09 19:41:53,982 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-8] binding parameter [1] as [VARCHAR] - [2023-01-19]
+2023-01-09 19:41:53,982 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-8] binding parameter [2] as [VARCHAR] - [1241455]
+2023-01-09 19:41:53,982 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-8] binding parameter [3] as [VARCHAR] - [1]
+2023-01-09 19:41:53,998 ERROR com.example.jpacalendarpractice02.controller.ScheduleController [http-nio-8080-exec-6] schedulelist
+2023-01-09 19:41:53,998 WARN com.example.jpacalendarpractice02.controller.ScheduleController [http-nio-8080-exec-6] schedulelist
+2023-01-09 19:41:53,998 INFO com.example.jpacalendarpractice02.controller.ScheduleController [http-nio-8080-exec-6] schedulelist
+2023-01-09 19:41:53,999 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        schedule0_.id as id1_0_,
+        schedule0_.date as date2_0_,
+        schedule0_.title as title3_0_,
+        schedule0_.email as email4_0_ 
+    from
+        schedule schedule0_ 
+    where
+        schedule0_.email=?
+2023-01-09 19:41:54,000 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-6] binding parameter [1] as [VARCHAR] - [1]
+2023-01-09 19:41:55,337 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-2] 
+    select
+        user_.email,
+        user_.password as password2_1_ 
+    from
+        schedule_user user_ 
+    where
+        user_.email=?
+2023-01-09 19:41:55,338 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-2] binding parameter [1] as [VARCHAR] - [1]
+2023-01-09 19:41:55,338 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-2] 
+    insert 
+    into
+        schedule
+        (date, title, email) 
+    values
+        (?, ?, ?)
+2023-01-09 19:41:55,339 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-2] binding parameter [1] as [VARCHAR] - [2023-01-28]
+2023-01-09 19:41:55,339 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-2] binding parameter [2] as [VARCHAR] - [34536346]
+2023-01-09 19:41:55,339 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-2] binding parameter [3] as [VARCHAR] - [1]
+2023-01-09 19:41:55,345 ERROR com.example.jpacalendarpractice02.controller.ScheduleController [http-nio-8080-exec-1] schedulelist
+2023-01-09 19:41:55,346 WARN com.example.jpacalendarpractice02.controller.ScheduleController [http-nio-8080-exec-1] schedulelist
+2023-01-09 19:41:55,346 INFO com.example.jpacalendarpractice02.controller.ScheduleController [http-nio-8080-exec-1] schedulelist
+2023-01-09 19:41:55,347 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    select
+        schedule0_.id as id1_0_,
+        schedule0_.date as date2_0_,
+        schedule0_.title as title3_0_,
+        schedule0_.email as email4_0_ 
+    from
+        schedule schedule0_ 
+    where
+        schedule0_.email=?
+2023-01-09 19:41:55,348 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-1] binding parameter [1] as [VARCHAR] - [1]
