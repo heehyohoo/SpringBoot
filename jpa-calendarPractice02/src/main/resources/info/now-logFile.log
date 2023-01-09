@@ -1,23 +1,10 @@
-2023-01-09 19:41:43,819 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
-    select
-        user_.email,
-        user_.password as password2_1_ 
-    from
-        schedule_user user_ 
-    where
-        user_.email=?
-2023-01-09 19:41:43,843 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-1] binding parameter [1] as [VARCHAR] - [null]
-2023-01-09 19:41:43,854 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
-    insert 
-    into
-        schedule
-        (date, title, email) 
-    values
-        (?, ?, ?)
-2023-01-09 19:41:43,854 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-1] binding parameter [1] as [VARCHAR] - [2023-01-11]
-2023-01-09 19:41:43,855 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-1] binding parameter [2] as [VARCHAR] - [14516]
-2023-01-09 19:41:43,856 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-1] binding parameter [3] as [VARCHAR] - [null]
-2023-01-09 19:41:49,620 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-4] 
+2023-01-09 20:23:05,848 INFO org.springframework.boot.StartupInfoLogger [main] Starting JpaCalendarPractice02Application using Java 11.0.16 on noteBook-Jay with PID 9864 (C:\WorkSpace\boot\jpa-calendarPractice02\build\classes\java\main started by Jay in C:\WorkSpace\boot\jpa-calendarPractice02)
+2023-01-09 20:23:05,850 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-09 20:23:08,093 INFO org.springframework.boot.StartupInfoLogger [main] Started JpaCalendarPractice02Application in 2.526 seconds (JVM running for 3.089)
+2023-01-09 20:23:15,899 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-3] [[START]]com.example.jpacalendarpractice02.controller.UserController.selectUser() <=================
+2023-01-09 20:23:15,901 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-3] Argument/Parameter : [UserRequest(email=1, password=1), org.apache.catalina.session.StandardSessionFacade@11bde13e]
+2023-01-09 20:23:15,902 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-3] ================[[END : selectUser()]]==================
+2023-01-09 20:23:15,969 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-3] 
     select
         user0_.email as email1_1_,
         user0_.password as password2_1_ 
@@ -26,12 +13,12 @@
     where
         user0_.email=? 
         and user0_.password=?
-2023-01-09 19:41:49,621 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-4] binding parameter [1] as [VARCHAR] - [1]
-2023-01-09 19:41:49,622 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-4] binding parameter [2] as [VARCHAR] - [1]
-2023-01-09 19:41:51,304 ERROR com.example.jpacalendarpractice02.controller.ScheduleController [http-nio-8080-exec-9] schedulelist
-2023-01-09 19:41:51,305 WARN com.example.jpacalendarpractice02.controller.ScheduleController [http-nio-8080-exec-9] schedulelist
-2023-01-09 19:41:51,305 INFO com.example.jpacalendarpractice02.controller.ScheduleController [http-nio-8080-exec-9] schedulelist
-2023-01-09 19:41:51,308 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-9] 
+2023-01-09 20:23:15,975 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-3] binding parameter [1] as [VARCHAR] - [1]
+2023-01-09 20:23:15,976 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-3] binding parameter [2] as [VARCHAR] - [1]
+2023-01-09 20:23:17,805 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-6] [[START]]com.example.jpacalendarpractice02.controller.ScheduleController.scheduleList() <=================
+2023-01-09 20:23:17,805 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-6] Argument/Parameter : [org.apache.catalina.session.StandardSessionFacade@11bde13e]
+2023-01-09 20:23:17,805 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-6] ================[[END : scheduleList()]]==================
+2023-01-09 20:23:17,813 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
     select
         schedule0_.id as id1_0_,
         schedule0_.date as date2_0_,
@@ -41,8 +28,11 @@
         schedule schedule0_ 
     where
         schedule0_.email=?
-2023-01-09 19:41:51,309 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-9] binding parameter [1] as [VARCHAR] - [1]
-2023-01-09 19:41:53,979 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-8] 
+2023-01-09 20:23:17,815 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-6] binding parameter [1] as [VARCHAR] - [1]
+2023-01-09 20:23:19,840 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-7] [[START]]com.example.jpacalendarpractice02.controller.ScheduleController.insertSchedule() <=================
+2023-01-09 20:23:19,841 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-7] Argument/Parameter : [ScheduleRequest(email=null, id=null, title=1231516512, date=2023-01-10), org.apache.catalina.session.StandardSessionFacade@11bde13e]
+2023-01-09 20:23:19,842 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-7] ================[[END : insertSchedule()]]==================
+2023-01-09 20:23:19,861 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-7] 
     select
         user_.email,
         user_.password as password2_1_ 
@@ -50,21 +40,21 @@
         schedule_user user_ 
     where
         user_.email=?
-2023-01-09 19:41:53,980 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-8] binding parameter [1] as [VARCHAR] - [1]
-2023-01-09 19:41:53,981 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-8] 
+2023-01-09 20:23:19,862 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-7] binding parameter [1] as [VARCHAR] - [1]
+2023-01-09 20:23:19,864 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-7] 
     insert 
     into
         schedule
         (date, title, email) 
     values
         (?, ?, ?)
-2023-01-09 19:41:53,982 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-8] binding parameter [1] as [VARCHAR] - [2023-01-19]
-2023-01-09 19:41:53,982 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-8] binding parameter [2] as [VARCHAR] - [1241455]
-2023-01-09 19:41:53,982 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-8] binding parameter [3] as [VARCHAR] - [1]
-2023-01-09 19:41:53,998 ERROR com.example.jpacalendarpractice02.controller.ScheduleController [http-nio-8080-exec-6] schedulelist
-2023-01-09 19:41:53,998 WARN com.example.jpacalendarpractice02.controller.ScheduleController [http-nio-8080-exec-6] schedulelist
-2023-01-09 19:41:53,998 INFO com.example.jpacalendarpractice02.controller.ScheduleController [http-nio-8080-exec-6] schedulelist
-2023-01-09 19:41:53,999 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+2023-01-09 20:23:19,865 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-7] binding parameter [1] as [VARCHAR] - [2023-01-10]
+2023-01-09 20:23:19,865 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-7] binding parameter [2] as [VARCHAR] - [1231516512]
+2023-01-09 20:23:19,865 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-7] binding parameter [3] as [VARCHAR] - [1]
+2023-01-09 20:23:19,881 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-8] [[START]]com.example.jpacalendarpractice02.controller.ScheduleController.scheduleList() <=================
+2023-01-09 20:23:19,881 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-8] Argument/Parameter : [org.apache.catalina.session.StandardSessionFacade@11bde13e]
+2023-01-09 20:23:19,881 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-8] ================[[END : scheduleList()]]==================
+2023-01-09 20:23:19,882 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-8] 
     select
         schedule0_.id as id1_0_,
         schedule0_.date as date2_0_,
@@ -74,30 +64,32 @@
         schedule schedule0_ 
     where
         schedule0_.email=?
-2023-01-09 19:41:54,000 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-6] binding parameter [1] as [VARCHAR] - [1]
-2023-01-09 19:41:55,337 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-2] 
+2023-01-09 20:23:19,883 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-8] binding parameter [1] as [VARCHAR] - [1]
+2023-01-09 20:23:21,563 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-10] [[START]]com.example.jpacalendarpractice02.controller.ScheduleController.deleteSchedule() <=================
+2023-01-09 20:23:21,564 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-10] Argument/Parameter : [8]
+2023-01-09 20:23:21,564 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-10] ================[[END : deleteSchedule()]]==================
+2023-01-09 20:23:21,570 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-10] 
     select
-        user_.email,
-        user_.password as password2_1_ 
+        schedule0_.id as id1_0_0_,
+        schedule0_.date as date2_0_0_,
+        schedule0_.title as title3_0_0_,
+        schedule0_.email as email4_0_0_ 
     from
-        schedule_user user_ 
+        schedule schedule0_ 
     where
-        user_.email=?
-2023-01-09 19:41:55,338 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-2] binding parameter [1] as [VARCHAR] - [1]
-2023-01-09 19:41:55,338 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-2] 
-    insert 
-    into
-        schedule
-        (date, title, email) 
-    values
-        (?, ?, ?)
-2023-01-09 19:41:55,339 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-2] binding parameter [1] as [VARCHAR] - [2023-01-28]
-2023-01-09 19:41:55,339 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-2] binding parameter [2] as [VARCHAR] - [34536346]
-2023-01-09 19:41:55,339 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-2] binding parameter [3] as [VARCHAR] - [1]
-2023-01-09 19:41:55,345 ERROR com.example.jpacalendarpractice02.controller.ScheduleController [http-nio-8080-exec-1] schedulelist
-2023-01-09 19:41:55,346 WARN com.example.jpacalendarpractice02.controller.ScheduleController [http-nio-8080-exec-1] schedulelist
-2023-01-09 19:41:55,346 INFO com.example.jpacalendarpractice02.controller.ScheduleController [http-nio-8080-exec-1] schedulelist
-2023-01-09 19:41:55,347 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+        schedule0_.id=?
+2023-01-09 20:23:21,571 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-10] binding parameter [1] as [BIGINT] - [8]
+2023-01-09 20:23:21,583 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-10] 
+    delete 
+    from
+        schedule 
+    where
+        id=?
+2023-01-09 20:23:21,583 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-10] binding parameter [1] as [BIGINT] - [8]
+2023-01-09 20:23:21,594 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-9] [[START]]com.example.jpacalendarpractice02.controller.ScheduleController.scheduleList() <=================
+2023-01-09 20:23:21,595 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-9] Argument/Parameter : [org.apache.catalina.session.StandardSessionFacade@11bde13e]
+2023-01-09 20:23:21,595 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-9] ================[[END : scheduleList()]]==================
+2023-01-09 20:23:21,595 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-9] 
     select
         schedule0_.id as id1_0_,
         schedule0_.date as date2_0_,
@@ -107,4 +99,4 @@
         schedule schedule0_ 
     where
         schedule0_.email=?
-2023-01-09 19:41:55,348 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-1] binding parameter [1] as [VARCHAR] - [1]
+2023-01-09 20:23:21,596 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-9] binding parameter [1] as [VARCHAR] - [1]
