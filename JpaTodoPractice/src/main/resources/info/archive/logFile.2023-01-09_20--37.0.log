@@ -1,0 +1,24 @@
+2023-01-09 20:37:08,938 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    select
+        todo0_.id as id1_0_0_,
+        todo0_.indate as indate2_0_0_,
+        todo0_.todos as todos3_0_0_ 
+    from
+        todo todo0_ 
+    where
+        todo0_.id=?
+2023-01-09 20:37:08,940 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-1] binding parameter [1] as [BIGINT] - [8]
+2023-01-09 20:37:08,942 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    delete 
+    from
+        todo 
+    where
+        id=?
+2023-01-09 20:37:08,943 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-1] binding parameter [1] as [BIGINT] - [8]
+2023-01-09 20:37:08,954 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-2] 
+    select
+        todo0_.id as id1_0_,
+        todo0_.indate as indate2_0_,
+        todo0_.todos as todos3_0_ 
+    from
+        todo todo0_
