@@ -1,0 +1,72 @@
+2023-01-09 21:22:06,502 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-7] ===========================[[START]]===========================
+2023-01-09 21:22:06,503 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-7] com.example.jpatodopractice.todo.controller.TodoRestController.inserTodos() CALLED
+2023-01-09 21:22:06,504 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-7] PARAMETERS : []
+2023-01-09 21:22:06,504 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-7] ===========================[[END]]===========================
+2023-01-09 21:22:06,504 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-7] ===========================[[START]]===========================
+2023-01-09 21:22:06,504 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-7] com.example.jpatodopractice.service.impl.TodoServiceImpl.inserTodos() CALLED
+2023-01-09 21:22:06,504 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-7] PARAMETERS : []
+2023-01-09 21:22:06,505 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-7] ===========================[[END]]===========================
+2023-01-09 21:22:06,505 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-7] ===========================[[START]]===========================
+2023-01-09 21:22:06,505 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-7] org.springframework.data.repository.CrudRepository.save() CALLED
+2023-01-09 21:22:06,505 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-7] PARAMETERS : [com.example.jpatodopractice.entity.Todo@6c1ece10]
+2023-01-09 21:22:06,505 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-7] ===========================[[END]]===========================
+2023-01-09 21:22:06,506 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-7] 
+    insert 
+    into
+        todo
+        (indate, todos) 
+    values
+        (?, ?)
+2023-01-09 21:22:06,506 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-7] binding parameter [1] as [VARCHAR] - [null]
+2023-01-09 21:22:06,506 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-7] binding parameter [2] as [VARCHAR] - []
+2023-01-09 21:22:06,513 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-5] ===========================[[START]]===========================
+2023-01-09 21:22:06,514 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-5] com.example.jpatodopractice.todo.controller.TodoRestController.todoList() CALLED
+2023-01-09 21:22:06,514 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-5] PARAMETERS : []
+2023-01-09 21:22:06,514 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-5] ===========================[[END]]===========================
+2023-01-09 21:22:06,514 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-5] ===========================[[START]]===========================
+2023-01-09 21:22:06,514 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-5] com.example.jpatodopractice.service.impl.TodoServiceImpl.todolist() CALLED
+2023-01-09 21:22:06,515 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-5] PARAMETERS : []
+2023-01-09 21:22:06,515 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-5] ===========================[[END]]===========================
+2023-01-09 21:22:06,516 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-5] 
+    select
+        todo0_.id as id1_0_,
+        todo0_.indate as indate2_0_,
+        todo0_.todos as todos3_0_ 
+    from
+        todo todo0_
+2023-01-09 21:22:12,441 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-1] ===========================[[START]]===========================
+2023-01-09 21:22:12,442 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-1] com.example.jpatodopractice.todo.controller.TodoRestController.inserTodos() CALLED
+2023-01-09 21:22:12,442 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-1] PARAMETERS : [됩니까]
+2023-01-09 21:22:12,442 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-1] ===========================[[END]]===========================
+2023-01-09 21:22:12,442 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-1] ===========================[[START]]===========================
+2023-01-09 21:22:12,442 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-1] com.example.jpatodopractice.service.impl.TodoServiceImpl.inserTodos() CALLED
+2023-01-09 21:22:12,442 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-1] PARAMETERS : [됩니까]
+2023-01-09 21:22:12,442 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-1] ===========================[[END]]===========================
+2023-01-09 21:22:12,442 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-1] ===========================[[START]]===========================
+2023-01-09 21:22:12,442 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-1] org.springframework.data.repository.CrudRepository.save() CALLED
+2023-01-09 21:22:12,442 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-1] PARAMETERS : [com.example.jpatodopractice.entity.Todo@51d09c3b]
+2023-01-09 21:22:12,442 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-1] ===========================[[END]]===========================
+2023-01-09 21:22:12,444 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-1] 
+    insert 
+    into
+        todo
+        (indate, todos) 
+    values
+        (?, ?)
+2023-01-09 21:22:12,444 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-1] binding parameter [1] as [VARCHAR] - [null]
+2023-01-09 21:22:12,444 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-1] binding parameter [2] as [VARCHAR] - [됩니까]
+2023-01-09 21:22:12,451 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-6] ===========================[[START]]===========================
+2023-01-09 21:22:12,451 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-6] com.example.jpatodopractice.todo.controller.TodoRestController.todoList() CALLED
+2023-01-09 21:22:12,451 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-6] PARAMETERS : []
+2023-01-09 21:22:12,451 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-6] ===========================[[END]]===========================
+2023-01-09 21:22:12,451 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-6] ===========================[[START]]===========================
+2023-01-09 21:22:12,451 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-6] com.example.jpatodopractice.service.impl.TodoServiceImpl.todolist() CALLED
+2023-01-09 21:22:12,452 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-6] PARAMETERS : []
+2023-01-09 21:22:12,452 INFO com.example.jpatodopractice.aop.LogAdvice [http-nio-8080-exec-6] ===========================[[END]]===========================
+2023-01-09 21:22:12,453 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    select
+        todo0_.id as id1_0_,
+        todo0_.indate as indate2_0_,
+        todo0_.todos as todos3_0_ 
+    from
+        todo todo0_

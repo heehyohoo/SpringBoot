@@ -21,9 +21,9 @@ public class LogAdvice {
     //파워쉘 실시간 로그 찍기
 
     //컨트롤러, 서비스, 리포짓 토리를 지나면 아래와같이 로그를 기록한다.
-    @Around(" execution(* com.example.jpatodopractice.controller..*Controller.*(..))" +
-            "|| execution(* com.example.jpatodopractice.service..*Controller.*(..))" +
-            "|| execution(* com.example.jpatodopractice.repository..*Controller.*(..))")
+    @Around(" execution(* com.example.jpatodopractice.todo.controller..*Controller.*(..))" +
+            "|| execution(* com.example.jpatodopractice.service..*Service*.*(..))" +
+            "|| execution(* com.example.jpatodopractice.repository..*Repository.*(..))")
     public Object logAdvice(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         String className = proceedingJoinPoint.getSignature().getDeclaringTypeName(); // 클래스이름
         String methodName = proceedingJoinPoint.getSignature().getName(); // 메서드이름

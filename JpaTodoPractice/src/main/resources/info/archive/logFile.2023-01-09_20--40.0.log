@@ -1,0 +1,48 @@
+2023-01-09 20:40:40,605 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-6] 
+    insert 
+    into
+        todo
+        (indate, todos) 
+    values
+        (?, ?)
+2023-01-09 20:40:40,607 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-6] binding parameter [1] as [VARCHAR] - [null]
+2023-01-09 20:40:40,607 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-6] binding parameter [2] as [VARCHAR] - [ㅁㄴㅇㅂㅈㄱㄽㅂ]
+2023-01-09 20:40:40,616 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-7] 
+    select
+        todo0_.id as id1_0_,
+        todo0_.indate as indate2_0_,
+        todo0_.todos as todos3_0_ 
+    from
+        todo todo0_
+2023-01-09 20:40:45,374 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-4] 
+    insert 
+    into
+        todo
+        (indate, todos) 
+    values
+        (?, ?)
+2023-01-09 20:40:45,375 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-4] binding parameter [1] as [VARCHAR] - [null]
+2023-01-09 20:40:45,375 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-4] binding parameter [2] as [VARCHAR] - [ㄴㅁㅇㅁㄴㄴㅌ]
+2023-01-09 20:40:45,384 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-9] 
+    select
+        todo0_.id as id1_0_,
+        todo0_.indate as indate2_0_,
+        todo0_.todos as todos3_0_ 
+    from
+        todo todo0_
+2023-01-09 20:40:54,471 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-10] 
+    insert 
+    into
+        todo
+        (indate, todos) 
+    values
+        (?, ?)
+2023-01-09 20:40:54,471 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-10] binding parameter [1] as [VARCHAR] - [null]
+2023-01-09 20:40:54,471 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-10] binding parameter [2] as [VARCHAR] - [장원이바보]
+2023-01-09 20:40:54,480 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-2] 
+    select
+        todo0_.id as id1_0_,
+        todo0_.indate as indate2_0_,
+        todo0_.todos as todos3_0_ 
+    from
+        todo todo0_

@@ -1,0 +1,6 @@
+2023-01-09 21:06:17,317 INFO org.springframework.boot.StartupInfoLogger [main] Starting JpaCalendarPractice02Application using Java 11.0.16 on noteBook-Jay with PID 8024 (C:\WorkSpace\boot\jpa-calendarPractice02\build\classes\java\main started by Jay in C:\WorkSpace\boot\jpa-calendarPractice02)
+2023-01-09 21:06:17,323 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-09 21:06:20,274 INFO org.springframework.boot.StartupInfoLogger [main] Started JpaCalendarPractice02Application in 3.339 seconds (JVM running for 4.007)
+2023-01-09 21:06:49,922 INFO org.springframework.boot.StartupInfoLogger [main] Starting JpaCalendarPractice02Application using Java 11.0.16 on noteBook-Jay with PID 13452 (C:\WorkSpace\boot\jpa-calendarPractice02\build\classes\java\main started by Jay in C:\WorkSpace\boot\jpa-calendarPractice02)
+2023-01-09 21:06:49,925 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-09 21:06:52,549 INFO org.springframework.boot.StartupInfoLogger [main] Started JpaCalendarPractice02Application in 3.019 seconds (JVM running for 3.73)
