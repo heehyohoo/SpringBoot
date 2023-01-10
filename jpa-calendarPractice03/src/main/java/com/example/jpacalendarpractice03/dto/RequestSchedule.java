@@ -10,7 +10,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class ResquestSchedule {
+public class RequestSchedule {
 
     private String email;
     private Long id;
