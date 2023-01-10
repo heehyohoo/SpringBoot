@@ -1,7 +1,7 @@
 package com.example.jpacalendarpractice03.dto;
 
-import entity.Schedule;
-import entity.User;
+import com.example.jpacalendarpractice03.entity.Schedule;
+import com.example.jpacalendarpractice03.entity.User;
 import lombok.*;
 
 

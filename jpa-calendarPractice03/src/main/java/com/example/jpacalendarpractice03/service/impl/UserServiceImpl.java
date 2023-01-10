@@ -4,7 +4,7 @@ package com.example.jpacalendarpractice03.service.impl;
 import com.example.jpacalendarpractice03.dto.RequestUser;
 import com.example.jpacalendarpractice03.repository.UserRepository;
 import com.example.jpacalendarpractice03.service.UserService;
-import entity.User;
+import com.example.jpacalendarpractice03.entity.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -28,7 +28,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public String selectUser(RequestUser requestUser) {
 
-        User user = userRepository.findByIdAndPassword(requestUser.getEmail(), requestUser.getPassword()).orElse(null);
+        User user = userRepository.findByEmailAndPassword(requestUser.getEmail(), requestUser.getPassword()).orElse(null);
 
         if (user != null) {
             return "success";

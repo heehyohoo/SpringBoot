@@ -1,6 +1,6 @@
 package com.example.jpacalendarpractice03.dto;
 
-import entity.Schedule;
+import com.example.jpacalendarpractice03.entity.Schedule;
 import lombok.*;
 
 
@@ -9,7 +9,6 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
-
 public class ResponseSchedule {
 
     private String id;

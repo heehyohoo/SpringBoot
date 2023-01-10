@@ -1,4 +1,4 @@
-package entity;
+package com.example.jpacalendarpractice03.entity;
 
 
 import lombok.AllArgsConstructor;
@@ -19,12 +19,12 @@ public class Schedule {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
+    @Column(name = "id")
     private Long id;
 
-    @Column
+    @Column(name = "title")
     private String title;
-    @Column
+    @Column(name = "date")
     private String date;
 
 

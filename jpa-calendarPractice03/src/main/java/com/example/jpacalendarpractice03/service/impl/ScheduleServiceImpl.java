@@ -4,7 +4,7 @@ import com.example.jpacalendarpractice03.dto.RequestSchedule;
 import com.example.jpacalendarpractice03.dto.ResponseSchedule;
 import com.example.jpacalendarpractice03.repository.ScheduleRepository;
 import com.example.jpacalendarpractice03.service.ScheduleService;
-import entity.User;
+import com.example.jpacalendarpractice03.entity.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

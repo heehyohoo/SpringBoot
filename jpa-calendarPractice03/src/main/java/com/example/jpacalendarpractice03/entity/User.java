@@ -1,4 +1,4 @@
-package entity;
+package com.example.jpacalendarpractice03.entity;
 
 
 import lombok.AllArgsConstructor;
@@ -9,20 +9,20 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.List;
 
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "schedule_user")
 @Getter
 @Builder
-@AllArgsConstructor
-@NoArgsConstructor
 public class User {
 
 
     @Id
-    @Column
+    @Column(name = "email")
     private String email;
 
-    @Column
+    @Column(name = "password")
     private String password;
 
     @OneToMany

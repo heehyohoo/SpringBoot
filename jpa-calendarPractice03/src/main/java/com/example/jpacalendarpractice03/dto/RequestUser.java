@@ -1,6 +1,6 @@
 package com.example.jpacalendarpractice03.dto;
 
-import entity.User;
+import com.example.jpacalendarpractice03.entity.User;
 import lombok.*;
 
 
