@@ -1,0 +1,49 @@
+2023-01-10 18:22:01,027 INFO org.springframework.boot.StartupInfoLogger [main] Starting JpaCalendarPractice02Application using Java 11.0.16 on noteBook-Jay with PID 3924 (C:\WorkSpace\boot\jpa-calendarPractice02\build\classes\java\main started by Jay in C:\WorkSpace\boot\jpa-calendarPractice02)
+2023-01-10 18:22:01,030 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-10 18:22:03,550 INFO org.springframework.boot.StartupInfoLogger [main] Started JpaCalendarPractice02Application in 2.791 seconds (JVM running for 3.247)
+2023-01-10 18:22:22,168 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-3] ===========================[[START]]===========================
+2023-01-10 18:22:22,171 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-3] com.example.jpacalendarpractice02.controller.UserController.selectUser() CALLED
+2023-01-10 18:22:22,171 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-3] PARAMETERS : [UserRequest(email=1, password=1), org.apache.catalina.session.StandardSessionFacade@722ae890]
+2023-01-10 18:22:22,171 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-3] ===========================[[END]]===========================
+2023-01-10 18:22:22,176 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-3] ===========================[[START]]===========================
+2023-01-10 18:22:22,177 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-3] com.example.jpacalendarpractice02.service.impl.UserServiceImpl.selectUser() CALLED
+2023-01-10 18:22:22,177 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-3] PARAMETERS : [UserRequest(email=1, password=1)]
+2023-01-10 18:22:22,177 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-3] ===========================[[END]]===========================
+2023-01-10 18:22:22,179 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-3] ===========================[[START]]===========================
+2023-01-10 18:22:22,179 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-3] com.example.jpacalendarpractice02.repository.UserRepository.findByEmailAndPassword() CALLED
+2023-01-10 18:22:22,179 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-3] PARAMETERS : [1, 1]
+2023-01-10 18:22:22,179 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-3] ===========================[[END]]===========================
+2023-01-10 18:22:22,232 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-3] 
+    select
+        user0_.email as email1_1_,
+        user0_.password as password2_1_ 
+    from
+        schedule_user user0_ 
+    where
+        user0_.email=? 
+        and user0_.password=?
+2023-01-10 18:22:22,238 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-3] binding parameter [1] as [VARCHAR] - [1]
+2023-01-10 18:22:22,239 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-3] binding parameter [2] as [VARCHAR] - [1]
+2023-01-10 18:22:25,374 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-7] ===========================[[START]]===========================
+2023-01-10 18:22:25,375 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-7] com.example.jpacalendarpractice02.controller.ScheduleController.scheduleList() CALLED
+2023-01-10 18:22:25,375 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-7] PARAMETERS : [org.apache.catalina.session.StandardSessionFacade@722ae890]
+2023-01-10 18:22:25,375 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-7] ===========================[[END]]===========================
+2023-01-10 18:22:25,377 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-7] ===========================[[START]]===========================
+2023-01-10 18:22:25,378 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-7] com.example.jpacalendarpractice02.service.impl.ScheduleServiceImpl.scheduleList() CALLED
+2023-01-10 18:22:25,378 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-7] PARAMETERS : [1]
+2023-01-10 18:22:25,378 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-7] ===========================[[END]]===========================
+2023-01-10 18:22:25,380 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-7] ===========================[[START]]===========================
+2023-01-10 18:22:25,381 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-7] com.example.jpacalendarpractice02.repository.ScheduleRepository.findByUser() CALLED
+2023-01-10 18:22:25,381 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-7] PARAMETERS : [com.example.jpacalendarpractice02.entity.User@53fe2063]
+2023-01-10 18:22:25,381 INFO com.example.jpacalendarpractice02.aop.LogAdvice [http-nio-8080-exec-7] ===========================[[END]]===========================
+2023-01-10 18:22:25,384 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [http-nio-8080-exec-7] 
+    select
+        schedule0_.id as id1_0_,
+        schedule0_.date as date2_0_,
+        schedule0_.title as title3_0_,
+        schedule0_.email as email4_0_ 
+    from
+        schedule schedule0_ 
+    where
+        schedule0_.email=?
+2023-01-10 18:22:25,386 TRACE org.hibernate.type.descriptor.sql.BasicBinder [http-nio-8080-exec-7] binding parameter [1] as [VARCHAR] - [1]

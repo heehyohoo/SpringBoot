@@ -1,0 +1,26 @@
+2023-01-10 20:14:01,815 INFO org.springframework.boot.StartupInfoLogger [Test worker] Starting ScheduleControllerTest using Java 11.0.16 on noteBook-Jay with PID 6760 (started by Jay in C:\WorkSpace\boot\jpa-calendarPractice02)
+2023-01-10 20:14:01,819 INFO org.springframework.boot.SpringApplication [Test worker] No active profile set, falling back to 1 default profile: "default"
+2023-01-10 20:14:06,610 INFO org.springframework.boot.StartupInfoLogger [Test worker] Started ScheduleControllerTest in 5.126 seconds (JVM running for 6.219)
+2023-01-10 20:14:06,899 INFO com.example.jpacalendarpractice02.aop.LogAdvice [Test worker] ===========================[[START]]===========================
+2023-01-10 20:14:06,904 INFO com.example.jpacalendarpractice02.aop.LogAdvice [Test worker] com.example.jpacalendarpractice02.controller.ScheduleController.deleteSchedule() CALLED
+2023-01-10 20:14:06,905 INFO com.example.jpacalendarpractice02.aop.LogAdvice [Test worker] PARAMETERS : [26]
+2023-01-10 20:14:06,905 INFO com.example.jpacalendarpractice02.aop.LogAdvice [Test worker] ===========================[[END]]===========================
+2023-01-10 20:14:06,917 INFO com.example.jpacalendarpractice02.aop.LogAdvice [Test worker] ===========================[[START]]===========================
+2023-01-10 20:14:06,918 INFO com.example.jpacalendarpractice02.aop.LogAdvice [Test worker] com.example.jpacalendarpractice02.service.impl.ScheduleServiceImpl.deleteSchedule() CALLED
+2023-01-10 20:14:06,919 INFO com.example.jpacalendarpractice02.aop.LogAdvice [Test worker] PARAMETERS : [26]
+2023-01-10 20:14:06,919 INFO com.example.jpacalendarpractice02.aop.LogAdvice [Test worker] ===========================[[END]]===========================
+2023-01-10 20:14:06,926 INFO com.example.jpacalendarpractice02.aop.LogAdvice [Test worker] ===========================[[START]]===========================
+2023-01-10 20:14:06,926 INFO com.example.jpacalendarpractice02.aop.LogAdvice [Test worker] org.springframework.data.repository.CrudRepository.deleteById() CALLED
+2023-01-10 20:14:06,927 INFO com.example.jpacalendarpractice02.aop.LogAdvice [Test worker] PARAMETERS : [26]
+2023-01-10 20:14:06,927 INFO com.example.jpacalendarpractice02.aop.LogAdvice [Test worker] ===========================[[END]]===========================
+2023-01-10 20:14:06,946 DEBUG org.hibernate.engine.jdbc.spi.SqlStatementLogger [Test worker] 
+    select
+        schedule0_.id as id1_0_0_,
+        schedule0_.date as date2_0_0_,
+        schedule0_.title as title3_0_0_,
+        schedule0_.email as email4_0_0_ 
+    from
+        schedule schedule0_ 
+    where
+        schedule0_.id=?
+2023-01-10 20:14:06,956 TRACE org.hibernate.type.descriptor.sql.BasicBinder [Test worker] binding parameter [1] as [BIGINT] - [26]
