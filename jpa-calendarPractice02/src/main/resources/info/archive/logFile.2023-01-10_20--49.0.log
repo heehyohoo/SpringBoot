@@ -1,0 +1,2 @@
+2023-01-10 20:49:59,580 INFO org.springframework.boot.StartupInfoLogger [Test worker] Starting ScheduleControllerTest using Java 11.0.16 on noteBook-Jay with PID 6076 (started by Jay in C:\WorkSpace\boot\jpa-calendarPractice02)
+2023-01-10 20:49:59,584 INFO org.springframework.boot.SpringApplication [Test worker] No active profile set, falling back to 1 default profile: "default"
