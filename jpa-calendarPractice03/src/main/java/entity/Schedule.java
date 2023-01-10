@@ -14,7 +14,6 @@ import javax.persistence.*;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class Schedule {
 
 
