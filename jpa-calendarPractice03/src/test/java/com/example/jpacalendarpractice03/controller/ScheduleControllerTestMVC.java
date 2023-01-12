@@ -1,4 +1,4 @@
-package back;
+package com.example.jpacalendarpractice03.controller;
 
 import com.example.jpacalendarpractice03.controller.ScheduleController;
 import org.junit.jupiter.api.BeforeEach;
