@@ -1,16 +1,13 @@
 package com.example.jpacalendarpractice03.controller;
 
-import com.example.jpacalendarpractice03.controller.ScheduleController;
 import com.example.jpacalendarpractice03.dto.ResponseSchedule;
 import com.example.jpacalendarpractice03.service.ScheduleService;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.web.servlet.MockMvc;
 
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
@@ -21,7 +18,6 @@ import static org.mockito.BDDMockito.given;
 @SpringBootTest
 class ScheduleControllerTest {
 
-    private MockMvc mockMvc; // 디펜던시 추가해야 사용가능
 
     // <내부에서 테스트 하는 방법> mockito를 활용
     @Mock // 가짜 모조품 컨트롤러를 구동테스트 해보려면 서비스가 주입이 되어있어야 한다. 가짜 서비스를 만듬
