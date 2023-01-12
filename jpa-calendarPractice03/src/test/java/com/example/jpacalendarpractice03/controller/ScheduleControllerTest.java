@@ -1,22 +1,27 @@
 package com.example.jpacalendarpractice03.controller;
 
+import com.example.jpacalendarpractice03.controller.ScheduleController;
 import com.example.jpacalendarpractice03.dto.ResponseSchedule;
 import com.example.jpacalendarpractice03.service.ScheduleService;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.web.servlet.MockMvc;
 
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.BDDMockito.given;
 
 @SpringBootTest
 class ScheduleControllerTest {
+
+    private MockMvc mockMvc; // 디펜던시 추가해야 사용가능
 
     // <내부에서 테스트 하는 방법> mockito를 활용
     @Mock // 가짜 모조품 컨트롤러를 구동테스트 해보려면 서비스가 주입이 되어있어야 한다. 가짜 서비스를 만듬
@@ -27,6 +32,7 @@ class ScheduleControllerTest {
     HttpSession httpSession;
 
     @Test
+    @DisplayName("모키토방식의 내부테스트") // 테스트의 이름을 지정해줄수도있다.
     void scheduleSelectTest() {
         // public List<ResponseSchedule> scheduleList(HttpSession session) 테스트하고자 하는 메서드****************
         // 이 메서드가 실행시 ResponseSchedule 타입의 List를 반환한다.
@@ -53,7 +59,9 @@ class ScheduleControllerTest {
         // 매개변수 (기준값,비교값)  컴마 를 기준으로 값이 같은지 확인한다.
         // "8" 과 testResult.get(0).getId() 값이 같은지 확인하는것. 맞다면 테스트가 성공할것이다.
 
-        Assertions.assertEquals("studyJPA",testResult.get(0).getTitle());
+//        Assertions.assertEquals("studyJPA",testResult.get(0).getTitle());
+        Assertions.assertEquals(responseSchedule,testResult.get(0));
+
         //"studyJPA" 와 testResult.get(0).getTitle()의 값이 같은지 비교해서 맞다면 테스트가 성공을 한다.
 
 
@@ -61,6 +69,6 @@ class ScheduleControllerTest {
         // 내부적 테스트의 좋은점은 메서드가 완성 , 구현체가 없어도 이 메서드가 실행이 가능할지 안할지 확인을 할수있다.
         // 현재 테스트케이스의 자체가 단순하기때문에 간단하게 테스트를 할수있게 되었다.
         // 컨트롤러에 메서드를 직접 호출하여 내부적으로 테스트를 진행했다.
-
     }
+
 }
