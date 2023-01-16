@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/ajextest" />
+    <file type="web" url="file://$PROJECT_DIR$/chat" />
+    <file type="web" url="file://$PROJECT_DIR$/demo" />
+    <file type="web" url="file://$PROJECT_DIR$/demo1" />
+    <file type="web" url="file://$PROJECT_DIR$/finalProject" />
+    <file type="web" url="file://$PROJECT_DIR$/formtest" />
+    <file type="web" url="file://$PROJECT_DIR$/jpa-calendarPractice01" />
+    <file type="web" url="file://$PROJECT_DIR$/jpa-calendarPractice02" />
+    <file type="web" url="file://$PROJECT_DIR$/jpa-calendarPractice03" />
+    <file type="web" url="file://$PROJECT_DIR$/jpaPractice" />
+    <file type="web" url="file://$PROJECT_DIR$/jpaPractice2" />
+    <file type="web" url="file://$PROJECT_DIR$/jpaPractice3" />
+    <file type="web" url="file://$PROJECT_DIR$/jpaTest01" />
+    <file type="web" url="file://$PROJECT_DIR$/jpaTodo" />
+    <file type="web" url="file://$PROJECT_DIR$/jpaTodoPractice" />
+    <file type="web" url="file://$PROJECT_DIR$/JpaTodoSangsu" />
+    <file type="web" url="file://$PROJECT_DIR$/newfinalproject" />
+    <file type="web" url="file://$PROJECT_DIR$/todolist" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
+  </component>
+</project>

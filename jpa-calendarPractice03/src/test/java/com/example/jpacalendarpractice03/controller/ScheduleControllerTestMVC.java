@@ -13,6 +13,8 @@ import org.springframework.util.MultiValueMap;
 
 import javax.transaction.Transactional;
 
+import java.util.Collections;
+
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -69,17 +71,17 @@ class ScheduleControllerTestMVC {
 
     @Test
     @DisplayName("인서트 테스트")
-//    @Transactional  // 테스트에서 트랜젝셔널 어노테이션은 롤백을 의미 이 어노테이션이 없다면 테스트후 DB에 데이터가 삭제되 버리고 있다면 삭제헀다가 다시 원상복구한다.
+    @Transactional  // 테스트에서 트랜젝셔널 어노테이션은 롤백을 의미 이 어노테이션이 없다면 테스트후 DB에 데이터가 삭제되 버리고 있다면 삭제헀다가 다시 원상복구한다.
     void scheduleInsertTest() throws Exception {
 
         //@PostMapping("/schedules") // 스케쥴을 입력하려면 email이 필요하다.
         //public String insertSchedule(RequestSchedule requestSchedule, HttpSession session) {
 
         MultiValueMap<String, String> param = new LinkedMultiValueMap<>();
-        param.add("email", String.valueOf(session.getAttribute("email")));
+        param.put("email", Collections.singletonList(String.valueOf(session.getAttribute("email"))));
 //        param.add("id","130");
-        param.add("title","바보");
-        param.add("date","2020년 12월");
+        param.put("title", Collections.singletonList("바보"));
+        param.put("date", Collections.singletonList("2020년 12월"));
 
 
         mockMvc.perform(post("/schedules") //호출 url    perform 다음에 오는 post는 맵핑이름 현재 포스트맵핑 메서드 테스트 이기 때문.
