@@ -16,11 +16,12 @@
     <file type="web" url="file://$PROJECT_DIR$/jpaPractice3" />
     <file type="web" url="file://$PROJECT_DIR$/jpaTest01" />
     <file type="web" url="file://$PROJECT_DIR$/jpaTodo" />
-    <file type="web" url="file://$PROJECT_DIR$/jpaTodoPractice" />
+    <file type="web" url="file://$PROJECT_DIR$/JpaTodoPractice" />
     <file type="web" url="file://$PROJECT_DIR$/JpaTodoSangsu" />
     <file type="web" url="file://$PROJECT_DIR$/newfinalproject" />
     <file type="web" url="file://$PROJECT_DIR$/todolist" />
   </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
   <component name="ProjectType">
     <option name="id" value="jpab" />
   </component>
